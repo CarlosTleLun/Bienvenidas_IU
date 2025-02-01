@@ -1,0 +1,982 @@
+/* Estilos Generales */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+.content-principal {
+  width: 95%;
+  margin: 0 auto;
+  /* Esto lo centra en la página */
+}
+
+.content-principal1 {
+  width: 90%;
+  /* Se adapta a pantallas pequeñas */
+  max-width: 800px;
+  /* No crece más de 800px en pantallas grandes */
+  margin: 0 auto;
+  /* Lo centra en la página */
+  padding: 10px;
+  /* Evita que el contenido toque los bordes */
+}
+
+@media (max-width: 600px) {
+  .content-principal1 {
+    width: 95%;
+    /* Aún más flexible en pantallas muy pequeñas */
+  }
+}
+
+
+header {
+  width: 100%;
+  height: 400px;
+  background: url(../img/header-horizontal.jpg);
+  background-attachment: scroll;
+  background-position: center;
+  background-size: 100% 100%;
+  /* Ajusta la imagen sin dejar espacios vacíos */
+  background-repeat: no-repeat;
+  display: block;
+  z-index: 2;
+  position: relative;
+  /* Necesario para posicionar el título dentro del header */
+}
+
+/* Teléfonos pequeños (pantallas de 400px o menos) */
+@media screen and (max-width: 650px) {
+  header {
+    height: 800px;
+    background: url(../img/header-vertical.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+/* --- Contenedor interno del header --- */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* Asegura que el contenido se alinee a la izquierda */
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+  /* Necesario para posicionar el title2 */
+  padding: 0 20px;
+  /* Espacio entre el contenido y los bordes */
+  box-sizing: border-box;
+  /* Asegura que el padding no haga que se salga del contenedor */
+}
+
+/* Estilo del logo dentro del header */
+.logo {
+  padding-top: 10px;
+  max-width: 60px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.logo {
+  height: 50px;
+  margin-left: 5px;
+}
+
+main {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Textos */
+#justify {
+  text-align: justify;
+}
+
+/* Estilos para h1.title */
+.title {
+  font-size: 1rem;
+  /* Tamaño de fuente para pantallas grandes */
+  font-weight: 700;
+  /* Peso de fuente más grueso */
+  margin: 10px 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  /* Centrado del texto */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  /* Sombra de texto */
+  padding: 5px;
+  /* Espacio entre el borde y el texto */
+}
+
+/* Estilos para h1.title2 */
+.title2 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 10px 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: left;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  border: 2px solid #ffffff;
+  padding: 5px;
+  position: absolute;
+  right: 20px;
+  max-width: calc(100% - 40px);
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  /* Suaviza los cambios */
+}
+
+/* Efecto hover */
+.title2:hover {
+  color: #011363;
+  /* Cambia el color del texto */
+  border-color: #181953;
+  /* Cambia el color del borde */
+  background: linear-gradient(135deg,
+      rgba(97, 139, 255, 0.7),
+      rgba(237, 252, 100, 0.1));
+  /* Agrega un fondo con gradiente */
+  text-shadow: 2px 2px 6px rgba(97, 134, 255, 0.9);
+  /* Acentúa la sombra */
+  transform: scale(1.05);
+  /* Hace que el elemento crezca ligeramente */
+}
+
+/* Enlaces dentro de .title2 */
+.title2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Estilos para h2.welcome */
+.welcome {
+  font-size: 3rem;
+  /* Tamaño de fuente para pantallas grandes */
+  font-weight: 500;
+  /* Peso de fuente más grueso */
+  color: #ffffff;
+  margin-top: 10px;
+  text-align: center;
+  /* Centrado del texto */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  /* Sombra de texto */
+  padding: 5px;
+  /* Espacio entre el borde y el texto */
+}
+
+/* El título principal */
+.titulo-principal {
+  font-family: 'Pacifico', cursive;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2px;
+  position: absolute;
+  /* Lo posicionamos de forma absoluta */
+  top: 50%;
+  /* Lo coloca a la mitad del header */
+  left: 50%;
+  /* Lo centra horizontalmente */
+  transform: translate(-50%, -50%) rotate(-7deg);
+  /* Centrado exacto y rotación */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 0.9;
+  width: 90%;
+  margin: 0;
+  /* Elimina los márgenes para un centrado más preciso */
+}
+
+.azul {
+  color: #ffcc00;
+  /* Amarillo */
+  -webkit-text-stroke: 1px #0a67e0;
+  /* Bordes azules */
+  -webkit-text-fill-color: #ffcc00;
+  /* Relleno amarillo */
+
+}
+
+.amarillo {
+  color: #ffcc00;
+  /* Amarillo */
+  -webkit-text-stroke: 1px #0a67e0;
+  /* Bordes azules */
+  -webkit-text-fill-color: #ffcc00;
+  /* Relleno amarillo */
+}
+
+
+
+
+/* Estilos responsivos */
+@media (max-width: 800px) {
+  .title {
+    font-size: 1rem;
+    /* Reducción de tamaño para pantallas medianas */
+  }
+
+  .title2 {
+    font-size: 0.7rem;
+    /* Reducción de tamaño para pantallas medianas */
+  }
+
+  .welcome {
+    font-size: 2rem;
+    /* Reducción de tamaño para pantallas medianas */
+  }
+
+  .titulo-principal {
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 1rem;
+    /* Reducción de tamaño para pantallas medianas */
+  }
+
+  .title2 {
+    font-size: 0.7rem;
+    /* Reducción de tamaño para pantallas medianas */
+  }
+
+  .welcome {
+    font-size: 2rem;
+    /* Reducción de tamaño para pantallas medianas */
+  }
+
+  .titulo-principal {
+    font-size: 2.8rem;
+    line-height: 1;
+  }
+}
+
+
+/*Seccion de inicio*/
+h1 {
+  color: #2c3e50;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+ul {
+  margin-left: 20px;
+}
+
+/* Estilos específicos para la sección "MUY IMPORTANTE" */
+.important-box {
+  border: 3px solid #d32f2f;
+  background-color: #ffebee;
+  color: #b71c1c;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.important-box::before {
+  content: "⚠️";
+  font-size: 30px;
+  color: #d32f2f;
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background-color: #ffebee;
+  border-radius: 50%;
+  padding: 5px;
+  border: 2px solid #d32f2f;
+}
+
+/* Estilos para la sección "Nota" */
+.note-box {
+  border: 3px solid #1976d2;
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.note-box::before {
+  content: "📝";
+  font-size: 30px;
+  color: #1976d2;
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background-color: #e3f2fd;
+  border-radius: 50%;
+  padding: 5px;
+  border: 2px solid #1976d2;
+}
+
+.note-box h2 {
+  color: #1976d2;
+  font-size: 22px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.note-box p {
+  font-size: 18px;
+}
+
+/*----------Otro note box2------*/
+.note-box2 {
+  border: 3px solid #c74017;
+  background-color: #fcddd4;
+  color: #c74017;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.note-box2::before {
+  font-size: 30px;
+  color: #c74017;
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background-color: #fcddd4;
+  border-radius: 50%;
+  padding: 5px;
+  border: 2px solid #c74017;
+}
+
+.note-box2 h2 {
+  color: #c74017;
+  font-size: 22px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.note-box2 p {
+  font-size: 18px;
+}
+
+/* Estilos para el cuadro "Inicio de Clases" */
+.start-class-box {
+  border: 3px solid #388e3c;
+  background-color: #e8f5e9;
+  color: #1b5e20;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.start-class-box::before {
+  content: "🗓️";
+  font-size: 30px;
+  color: #388e3c;
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background-color: #e8f5e9;
+  border-radius: 50%;
+  padding: 5px;
+  border: 2px solid #388e3c;
+}
+
+.start-class-box p {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+F .welcome-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.welcome-section .main-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.info-section {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.numero {
+  font-size: 1.5em;
+  color: rgb(7, 81, 151);
+  font-weight: bold;
+  margin-right: 5px;
+  /* Ajusta este valor para el espaciado ideal */
+}
+
+.accordion {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: transparent;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion-header {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.accordion-header:hover {
+  background-color: transparent;
+}
+
+.accordion-content {
+  display: none;
+  padding: 15px;
+  background-color: #f9f9ff;
+}
+
+.accordion-content.active {
+  display: block;
+}
+
+.accordion-header.open {
+  color: #3a3f58;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-header i {
+  font-size: 16px;
+  color: #3a3f58;
+  transition: transform 0.3s ease;
+}
+
+/* Gira la flecha cuando el acordeón está abierto */
+.accordion-header.open i {
+  transform: rotate(180deg);
+}
+
+.links {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.links a {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #004687;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.links a:hover {
+  background: #006bb6;
+}
+
+/* Estilos Generales del Footer */
+footer {
+  background-color: #002649;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  margin-top: 0;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+footer p {
+  margin: 0 auto 1rem;
+  line-height: 1.6;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #eede00;
+  /* Cambia el color al hacer hover */
+  transform: scale(1.2);
+  /* Aumenta ligeramente el tamaño del icono */
+}
+
+/* Logo en el footer */
+.logo-footer {
+  display: block;
+  margin: 0 auto 1rem;
+  max-width: 120px;
+  /* Ajusta el tamaño del logo */
+  height: auto;
+  filter: brightness(0) invert(1);
+  /* Asegura buena visibilidad en fondo oscuro */
+}
+
+@media (max-width: 600px) {
+  .logo-footer {
+    max-width: 90px;
+    /* Ajusta el tamaño del logo para pantallas pequeñas */
+  }
+}
+
+
+.creditos-enlace {
+  font-size: 16px;
+  /* Tamaño de fuente */
+  color: #89c5ee;
+  /* Color del texto */
+  text-decoration: none;
+  /* Eliminar subrayado */
+  font-weight: bold;
+  /* Texto en negrita */
+  position: relative;
+  /* Necesario para el efecto de la línea */
+}
+
+.creditos-enlace:hover {
+  color: #3498db;
+  /* Mantener el color del texto al hacer hover */
+}
+
+.creditos-enlace::after {
+  content: "";
+  /* Crear el contenido de la línea */
+  position: absolute;
+  bottom: -3px;
+  /* Ajustar la distancia de la línea debajo del texto */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  /* Grosor de la línea */
+  background-color: yellow;
+  /* Color de la línea */
+  transform: scaleX(0);
+  /* La línea comienza oculta */
+  transition: transform 0.3s ease;
+  /* Transición suave para el efecto */
+}
+
+.creditos-enlace:hover::after {
+  transform: scaleX(1);
+  /* La línea aparece al hacer hover */
+}
+
+/* Responsividad */
+/* Pantallas pequeñas (teléfonos) */
+@media (max-width: 600px) {
+  .logo {
+    margin-right: 0.5rem;
+    /* Espaciado entre logos */
+    margin-bottom: 0;
+    /* Elimina el margen inferior */
+  }
+
+  footer {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .social-links a {
+    font-size: 1.5rem;
+    /* Reduce el tamaño de los íconos */
+  }
+
+  footer p {
+    padding: 0 1rem;
+    /* Añade espacio interno en texto */
+  }
+}
+
+/* Pantallas medianas (tablets) */
+@media (max-width: 900px) {
+  .main {
+    padding: 1.8rem;
+  }
+
+  .welcome-section p {
+    font-size: 1rem;
+  }
+}
+
+/* Desktops grandes */
+@media (min-width: 1200px) {
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .info-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .links {
+    gap: 10px;
+  }
+}
+
+/* Tabla */
+/* Estilo general de la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Contenedor con scroll */
+.table-container {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Estilo para las cabeceras */
+th {
+  background-color: #f4f4f4;
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Estilo para las celdas de la tabla */
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para las filas alternadas */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+
+
+
+
+/* Tabla */
+/* Estilo general de la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Contenedor con scroll */
+.table-container {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Estilo para las cabeceras */
+th {
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 3px solid #ddd;
+  text-transform: uppercase;
+}
+
+/* Cabecera con fondo azul */
+th:first-child {
+  background-color: #1e3a8a;
+  /* Azul */
+  color: white;
+}
+
+/* Cabecera con fondo amarillo */
+th:nth-child(2) {
+  background-color: #756a00;
+  /* Amarillo */
+  color: white;
+}
+
+th:nth-child(3) {
+  background-color: #1e3a8a;
+  /* Amarillo */
+  color: white;
+}
+
+
+/* Estilo para las celdas de la tabla */
+td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  font-size: 14px;
+}
+
+/* Estilo para las filas alternadas */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+
+/* Bordes de la tabla */
+table,
+th,
+td {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+
+/* IMSS */
+.avisos {
+  background-color: #f0f0f0;
+  /* Fondo gris claro */
+  padding: 20px;
+  /* Espaciado interno */
+  border-radius: 10px;
+  /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra suave */
+  text-align: center;
+  /* Centrar el contenido */
+  max-width: 600px;
+  /* Ancho máximo del contenedor */
+  margin: 20px auto;
+  /* Centrado horizontal */
+}
+
+.avisos h1 {
+  font-size: 24px;
+  /* Tamaño de fuente */
+  color: #2c3e50;
+  /* Color del texto */
+  font-family: 'Arial', sans-serif;
+  /* Tipo de letra */
+  margin-bottom: 15px;
+  /* Espaciado inferior */
+}
+
+.cartel {
+  max-width: 100%;
+  /* Imagen responsive */
+  height: auto;
+  /* Mantener la proporción de la imagen */
+  border-radius: 8px;
+  /* Bordes redondeados para la imagen */
+  border: 2px solid #ccc;
+  /* Borde suave alrededor de la imagen */
+}
+
+.email {
+  max-width: 100%;
+  /* Se ajusta al ancho del contenedor */
+  height: auto;
+  /* Mantiene las proporciones de la imagen */
+  display: block;
+  /* Elimina los espacios extra alrededor de la imagen */
+  margin: 0 auto;
+  /* Centra la imagen horizontalmente */
+}
+
+.email {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.email:hover {
+  text-decoration: underline;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  background: #fafafa;
+  padding: 20px 40px;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  /* Alinea verticalmente */
+  padding-left: 10%;
+  padding-right: 10%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Sombreado en la parte inferior */
+}
+
+
+.breadcrumb h2 {
+  margin: 0;
+  /* Elimina el margen por defecto */
+}
+
+.breadcrumb .breadcrumb-links {
+  margin-left: auto;
+  /* Empuja los enlaces a la derecha */
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+  /* Transición para el hover */
+}
+
+.breadcrumb a:hover {
+  color: #002e91;
+  /* Cambia de color al pasar el cursor */
+}
+
+.breadcrumb span {
+  color: #666;
+}
+
+/* Sección de los créditos */
+.creditos {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10%;
+  margin-top: 10%;
+}
+
+/* Título principal (h2) */
+.creditos h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* Año en formato destacado */
+.anio {
+  font-size: 48px;
+  /* Tamaño grande para el año */
+  font-weight: bold;
+  /* Negrita */
+  color: #4A90E2;
+  /* Un color distintivo */
+  text-transform: uppercase;
+  /* Convertir el texto a mayúsculas */
+  margin-bottom: 20px;
+  /* Separación con los demás elementos */
+  display: inline-block;
+  /* Asegura que la línea se ajuste al texto */
+  padding-bottom: 10px;
+  /* Espacio entre el texto y la línea */
+  border-bottom: 2px solid #d4d4d4;
+  /* Línea gris debajo del año */
+  width: 100%;
+  /* Asegura que la línea cubra todo el ancho */
+}
+
+/* Estilo de las tarjetas de créditos */
+.creditos-card {
+  border: 1px solid #d4d4d4;
+  /* Solo borde, sin fondo */
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 800px;
+  text-align: left;
+  margin: 0 auto;
+  background: none;
+  /* Elimina el fondo */
+  box-shadow: none;
+  /* Elimina la sombra */
+}
+
+/* Contenido de las tarjetas */
+.creditos-content p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+/* Media queries para responsividad */
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .creditos h2 {
+    font-size: 18px;
+  }
+
+  .anio {
+    font-size: 36px;
+  }
+
+  .creditos-card {
+    width: 90%;
+    /* Hace que las tarjetas ocupen un 90% del ancho en móviles */
+    padding: 15px;
+  }
+
+  .creditos-content p {
+    font-size: 14px;
+    /* Ajusta el tamaño de la fuente */
+  }
+}
+
+/* Pantallas extra pequeñas (móviles muy pequeños) */
+@media (max-width: 480px) {
+  .anio {
+    font-size: 30px;
+  }
+
+  .creditos h2 {
+    font-size: 16px;
+  }
+
+  .creditos-card {
+    width: 100%;
+    /* Las tarjetas ocupan el 100% del ancho */
+    padding: 10px;
+  }
+
+  .creditos-content p {
+    font-size: 12px;
+    /* Fuente más pequeña */
+  }
+}
